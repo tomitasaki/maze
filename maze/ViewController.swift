@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                     let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     wallView.backgroundColor = UIColor.blackColor()
                     view.addSubview(wallView)
-                    wallRectArray.append(wallView.,)//frorc)//よめない
+                    wallRectArray.append(wallView.frame)
                 case 2:
                     let startview = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     startview.backgroundColor = UIColor.greenColor()
@@ -70,10 +70,10 @@ class ViewController: UIViewController {
         playerView.backgroundColor = UIColor.grayColor()
         self.view.addSubview(playerView)
         //motionmanagerを生成
-        playerMotionManager = CMMotionManager（）
+        playerMotionManager = CMMotionManager()
         playerMotionManager.accelerometerUpdateInterval = 80.2
         
-        self.startAccelerareter()
+        self.startAccelerometer()
         
     }
     
