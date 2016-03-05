@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         [1, 1, 1, 0, 0, 0],
         [1, 0, 0, 1, 1, 0],
         [0, 0, 1, 0, 0, 0],
-        [1, 1, 1, 0, 1, 0],
+        [0, 1, 1, 0, 1, 0],
         [0, 0, 0, 0, 1, 1],
         [0, 1, 1, 0, 0, 0],
         [0, 0, 1, 1, 1, 2],
@@ -51,14 +51,13 @@ class ViewController: UIViewController {
                     let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     wallView.backgroundColor = UIColor.blackColor()
                     view.addSubview(wallView)
-                    wallRectArray.append(wallView.frame)
                 case 2:
-                    let startview = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
-                    startview.backgroundColor = UIColor.greenColor()
+                    startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
+                    startView.backgroundColor = UIColor.greenColor()
                     self.view.addSubview(startView)
                 case 3:
-                    let goalview = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX,offsetY: cellOffsetY)
-                    goalview.backgroundColor = UIColor.redColor()
+                    goalView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX,offsetY: cellOffsetY)
+                    goalView.backgroundColor = UIColor.redColor()
                     self.view.addSubview(goalView)
                 default:
                     break
